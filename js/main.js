@@ -5,14 +5,17 @@
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		dots: true,
-        arrows: false,
+        arrows: true,
         infinity: true,
-        autoplay: true,
+        autoplay: false,
         autoplaySpeed: 1000,
         cssEase: 'ease-out',
         speed: 2500,
         appendDots: '.about-slider__dots',
+        prevArrow: '.slick-prev__arrow',
+        nextArrow: '.slick-next__arrow',
     });
+  
 
   //   $('.news-slider').slick({
 		// slidesToShow: 3,
@@ -66,6 +69,33 @@ $('a[href*="#"]').click(function() {
         };
       };
     });
+  });
+
+  
+  var $page = $('html, body');
+  $('a[href*="#"]').click(function() {
+    $page.animate({
+      scrollTop: $($.attr(this, 'href')).offset().top
+    }, 1800);
+    return false;
+  });
+
+
+
+  $(window).scroll(function() {
+    if ($(this).scrollTop() > $(this).height()) {
+      $('.top').addClass('active');
+    } else {
+      $('.top').removeClass('active');
+    }
+  });
+  $('.top').click(function() {
+    $('html, body').stop().animate({scrollTop: 0}, 'slow', 'swing');
+  });
+
+
+  $(window).on('load', function() {
+    $('.preloader').delay(1000).fadeOut('slow');
   });
 
   

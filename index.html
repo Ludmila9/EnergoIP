@@ -18,6 +18,8 @@
 
 
 <body>
+	<!-- <div class="preloader"><div class="pulse"></div></div> -->
+
 	<header class="head">
 		<div class="container">
 			<div class="head-wrap">
@@ -52,7 +54,12 @@
 							<a href="" class="btn hero-btn__contact">Зв’язатися з нами</a>
 						</div>
 						<a href="#progress" class="hero-scroll">
-							<img src="img/scroll.png">
+							<!-- <img src="img/scroll.png"> -->
+								<div class="down">
+									<svg class="icon-arr-down">
+										<use xlink:href="#aerrow-down"></use>
+									</svg>
+								</div>
 							<p>Гортати нижче</p>
 						</a>
 						
@@ -170,12 +177,18 @@
 							
 						</div>
 						<div class="about__nav">
-							<div class="slick-prev__arrow">
-								<img src="img/arr_left.svg">
+							<div class="arr slick-prev__arrow">
+								<svg class="icon-arr-left">
+									<use xlink:href="#aerrow-left"></use>
+								</svg>
+								<!-- <img src="img/arr_left.svg"> -->
 							</div>
 							<div class="about-slider__dots"></div>
-							<div class="slick-next__arrow">
-								<img src="img/arr_right.svg">
+							<div class="arr slick-next__arrow">
+								<!-- <img src="img/arr_right.svg"> -->
+								<svg class="icon-arr-right">
+									<use xlink:href="#aerrow-right"></use>
+								</svg>
 							</div>
 						</div>
 					</div>
@@ -315,39 +328,39 @@
 				<div class="links-wrap">
 					<div class="links__title">Корисні посилання</div>
 					<div class="links__items">
-						<a href="https://www.president.gov.ua/ru" class="links__item">
+						<a href="https://www.president.gov.ua/ru" class="links__item" target = "_blank">
 							<div class="links__img"><img src="img/link_ukr_2.png" alt=""></div>
 							<div class="links__text">Президент України</div>
 						</a>
-						<a href="https://rada.gov.ua/" class="links__item">
+						<a href="https://rada.gov.ua/" class="links__item" target = "_blank">
 							<div class="links__img"><img src="img/link_ukr_2.png" alt=""></div>
 							<div class="links__text">Верховна Рада <br>України</div>
 						</a>
-						<a href="https://www.kmu.gov.ua/" class="links__item">
+						<a href="https://www.kmu.gov.ua/" class="links__item" target = "_blank">
 							<div class="links__img"><img src="img/link_ukr_2.png" alt=""></div>
 							<div class="links__text">Урядовий портал</div>
 						</a>
-						<a href="https://ua.energy/" class="links__item">
+						<a href="https://ua.energy/" class="links__item" target = "_blank">
 							<div class="links__img"><img src="img/link_ukrenergo.png" alt=""></div>
 							<div class="links__text">НЕК Укренерго</div>
 						</a>
-						<a href="https://www.oree.com.ua/" class="links__item">
+						<a href="https://www.oree.com.ua/" class="links__item" target = "_blank">
 							<div class="links__img"><img src="img/link_operatop.png" alt=""></div>
 							<div class="links__text">Оператор ринку</div>
 						</a>
-						<a href="http://www.nerc.gov.ua/" class="links__item">
+						<a href="http://www.nerc.gov.ua/" class="links__item" target = "_blank">
 							<div class="links__img"><img src="img/link_nkrekp.png" alt=""></div>
 							<div class="links__text">НКРЕКП</div>
 						</a>
-						<a href="http://necu.org.ua/" class="links__item">
+						<a href="http://necu.org.ua/" class="links__item" target = "_blank">
 							<div class="links__img"><img src="img/link_nac_center.png" alt=""></div>
 							<div class="links__text">Національний <br>екологічний центр<br> України</div>
 						</a>
-						<a href="https://amcu.gov.ua/" class="links__item">
+						<a href="https://amcu.gov.ua/" class="links__item" target = "_blank">
 							<div class="links__img"><img src="img/link_AMK.png" alt=""></div>
 							<div class="links__text">Антимонопольний <br>комітет України</div>
 						</a>
-						<a href="http://mpe.kmu.gov.ua/minugol/#" class="links__item">
+						<a href="http://mpe.kmu.gov.ua/minugol/#" class="links__item" target = "_blank">
 							<div class="links__img"><img src="img/link_min_en.png" alt=""></div>
 							<div class="links__text">Міністерство <br>енергетики та захисту <br>довкілля України</div>
 						</a>
@@ -389,6 +402,27 @@
 			<p>Copyright© 2020. All rights reserved.</p>
 		</section>
 	</footer>
+
+	<div class="top">
+		<svg class="icon-arr">
+			<use xlink:href="#aerrow"></use>
+		</svg>
+	</div>
+
+	<svg style="display: none;">
+		<symbol id="aerrow" width="8" height="21" viewBox="0 0 8 21">
+			<path d="M4.35355 0.646446C4.15829 0.451185 3.84171 0.451185 3.64645 0.646446L0.464466 3.82843C0.269204 4.02369 0.269204 4.34027 0.464466 4.53553C0.659728 4.7308 0.976311 4.7308 1.17157 4.53553L4 1.70711L6.82843 4.53553C7.02369 4.7308 7.34027 4.7308 7.53553 4.53553C7.7308 4.34027 7.7308 4.02369 7.53553 3.82843L4.35355 0.646446ZM4.5 21L4.5 1H3.5L3.5 21H4.5Z"/>
+		</symbol>
+		<symbol id="aerrow-down" width="6" height="32" viewBox="0 0 6 32">
+			<path d="M2.75251 31.2475C2.88919 31.3842 3.1108 31.3842 3.24749 31.2475L5.47487 29.0201C5.61156 28.8834 5.61156 28.6618 5.47487 28.5251C5.33819 28.3884 5.11658 28.3884 4.9799 28.5251L3 30.505L1.0201 28.5251C0.883416 28.3884 0.661809 28.3884 0.525125 28.5251C0.388442 28.6618 0.388442 28.8834 0.525125 29.0201L2.75251 31.2475ZM2.65 -1.5299e-08L2.65 31L3.35 31L3.35 1.5299e-08L2.65 -1.5299e-08Z"/>
+		</symbol>
+		<symbol id="aerrow-right" width="38" height="8" viewBox="0 0 38 8">
+			<path d="M37.3536 4.35355C37.5488 4.15829 37.5488 3.84171 37.3536 3.64645L34.1716 0.464466C33.9763 0.269204 33.6597 0.269204 33.4645 0.464466C33.2692 0.659728 33.2692 0.976311 33.4645 1.17157L36.2929 4L33.4645 6.82843C33.2692 7.02369 33.2692 7.34027 33.4645 7.53553C33.6597 7.7308 33.9763 7.7308 34.1716 7.53553L37.3536 4.35355ZM0 4.5H37V3.5H0V4.5Z"/>
+		</symbol>
+		<symbol id="aerrow-left" width="38" height="8" viewBox="0 0 38 8">
+			<path d="M0.646447 4.35355C0.451184 4.15829 0.451184 3.84171 0.646447 3.64645L3.82843 0.464466C4.02369 0.269204 4.34027 0.269204 4.53553 0.464466C4.7308 0.659728 4.7308 0.976311 4.53553 1.17157L1.70711 4L4.53553 6.82843C4.7308 7.02369 4.7308 7.34027 4.53553 7.53553C4.34027 7.7308 4.02369 7.7308 3.82843 7.53553L0.646447 4.35355ZM38 4.5H1V3.5H38V4.5Z"/>
+		</symbol>
+	</svg>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 	<script src='js/slick.min.js'></script>
